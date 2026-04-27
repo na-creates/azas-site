@@ -402,6 +402,12 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .problems-solution {
+    font-size: 0.95rem;
+    word-break: auto-phrase;
+    text-align: center;
+  }
+
   /* パッケージカード余白 */
   .package-card {
     padding: 28px 24px;
