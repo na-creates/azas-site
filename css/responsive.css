@@ -241,6 +241,10 @@
   }
 
   /* ヘッダー */
+  .header-tel {
+    display: none;
+  }
+
   .global-nav {
     display: none;
   }
