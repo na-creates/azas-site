@@ -411,7 +411,7 @@ body {
 }
 .services-grid > *:last-child:nth-child(odd) {
   grid-column: 1 / -1;
-  max-width: calc(50% - 14px);
+  max-width: 420px;
   margin-inline: auto;
 }
 
