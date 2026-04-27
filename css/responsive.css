@@ -13,6 +13,26 @@
    ============================================ */
 @media (max-width: 1199px) {
 
+  /* 実績カード: テキスト横幅確保 */
+  .work-item .work-body {
+    padding: 28px 24px !important;
+  }
+
+  /* 料金表: 幅を広げる */
+  .pricing-grid {
+    max-width: 520px !important;
+  }
+
+  /* section-desc 幅制限を解除 */
+  .section-desc {
+    max-width: 100%;
+  }
+
+  /* cta-desc */
+  .cta-desc {
+    font-size: 1rem;
+  }
+
   /* ヒーローセクション */
   .hero-inner {
     grid-template-columns: 1fr;
@@ -140,6 +160,11 @@
   .info-table th {
     width: 160px;
   }
+
+  /* お悩みグリッド: 2列 */
+  .problems-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
@@ -154,6 +179,65 @@
     --font-size-h1: 2rem;
     --font-size-h2: 1.6rem;
     --font-size-h3: 1.3rem;
+  }
+
+  /* 実績カード: 縦並びに変換 */
+  .work-item {
+    flex-direction: column !important;
+  }
+
+  .work-item .work-image {
+    width: 100% !important;
+    min-height: 220px !important;
+    border-radius: 0 !important;
+  }
+
+  .work-item .work-body {
+    padding: 24px 20px !important;
+    border-radius: 0 !important;
+  }
+
+  /* ヒーロー余白 */
+  .hero-inner {
+    padding: 60px var(--spacing-container);
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    word-break: auto-phrase;
+  }
+
+  /* 料金表: フル幅 */
+  .pricing-grid {
+    max-width: 100% !important;
+  }
+
+  /* section-desc */
+  .section-desc {
+    font-size: 0.95rem;
+    word-break: auto-phrase;
+  }
+
+  /* cta-desc */
+  .cta-desc {
+    font-size: 0.95rem;
+    word-break: auto-phrase;
+  }
+
+  /* cta-note */
+  .cta-note {
+    font-size: 0.8rem;
+    word-break: auto-phrase;
+  }
+
+  /* フッター説明文 */
+  .footer-desc {
+    word-break: auto-phrase;
+  }
+
+  /* 実績グリッドの外側コンテナ */
+  div[style*="max-width: 820px"] {
+    max-width: 100% !important;
   }
 
   /* ヘッダー */
@@ -307,6 +391,16 @@
   .hero-actions {
     flex-direction: column;
     align-items: center;
+  }
+
+  /* お悩みグリッド: 1列 */
+  .problems-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* パッケージカード余白 */
+  .package-card {
+    padding: 28px 24px;
   }
 
   /* ボタン幅調整 */
