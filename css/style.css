@@ -1618,3 +1618,30 @@ body {
 .header-tel:hover {
   color: var(--color-primary-light);
 }
+
+
+/* ============================================
+   フッター アコーディオン（モバイル用矢印）
+   ============================================ */
+@media (max-width: 767px) {
+  .footer-col-title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+
+  .footer-col-title::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 0.75rem;
+    transition: transform 0.25s ease;
+    color: var(--color-text-light);
+  }
+
+  .footer-col-title[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+  }
+}

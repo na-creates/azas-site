@@ -147,6 +147,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // ============================================
+  // フッター アコーディオン（モバイルのみ）
+  // ============================================
+  function initFooterAccordion() {
+    if (window.innerWidth >= 768) return;
+    document.querySelectorAll('.footer-col-title').forEach(function(title) {
+      if (title.dataset.accordion) return;
+      title.dataset.accordion = 'true';
+      title.setAttribute('role', 'button');
+      title.setAttribute('aria-expanded', 'false');
+      var content = title.nextElementSibling;
+      if (content) {
+        content.style.display = 'none';
+      }
+      title.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        if (content) content.style.display = expanded ? 'none' : '';
+      });
+    });
+  }
+
+  initFooterAccordion();
+  window.addEventListener('resize', function() {
+    document.querySelectorAll('.footer-col-title').forEach(function(t) {
+      t.dataset.accordion = '';
+      var c = t.nextElementSibling;
+      if (c && window.innerWidth >= 768) c.style.display = '';
+    });
+    initFooterAccordion();
+  });
+
+  // ============================================
   // 現在のページのナビリンクにaria-current="page"を設定
   // ============================================
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
